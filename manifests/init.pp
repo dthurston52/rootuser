@@ -1,8 +1,8 @@
 class rootuser (
-    $password = undef,
+    $rootupenc = undef,
 ) {
     user { root:
         ensure => present,
-        password => $password,
+        password => hiera($rootupenc),
     }
 }
