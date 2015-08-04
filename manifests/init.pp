@@ -3,6 +3,6 @@ class rootuser (
 ) {
     user { root:
         ensure => present,
-        password => hiera($rootupenc),
+        password => hiera('rootupenc'),
     }
 }
